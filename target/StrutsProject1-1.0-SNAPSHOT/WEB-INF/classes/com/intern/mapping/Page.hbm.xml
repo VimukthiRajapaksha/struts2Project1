@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2018 9:31:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.intern.mapping.Page" table="page" catalog="demo" optimistic-lock="version">
+        <id name="pageId" type="java.lang.Integer">
+            <column name="page_id" />
+            <generator class="identity" />
+        </id>
+        <property name="pageName" type="string">
+            <column name="page_name" length="100" not-null="true" />
+        </property>
+        <property name="pageUrl" type="string">
+            <column name="page_url" length="100" not-null="true" />
+        </property>
+        <set name="pageFunctionses" table="page_functions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="page_id" not-null="true" />
+            </key>
+            <one-to-many class="com.intern.mapping.PageFunctions" />
+        </set>
+        <set name="users" table="role_pages" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="page_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.intern.mapping.User">
+                <column name="role_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2018 9:31:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.intern.mapping.Function" table="function" catalog="demo" optimistic-lock="version">
+        <id name="funId" type="java.lang.Integer">
+            <column name="fun_id" />
+            <generator class="identity" />
+        </id>
+        <property name="funName" type="string">
+            <column name="fun_name" length="100" not-null="true" />
+        </property>
+        <property name="funUrl" type="string">
+            <column name="fun_url" length="100" not-null="true" />
+        </property>
+        <set name="pageFunctionses" table="page_functions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fun_id" not-null="true" />
+            </key>
+            <one-to-many class="com.intern.mapping.PageFunctions" />
+        </set>
+    </class>
+</hibernate-mapping>

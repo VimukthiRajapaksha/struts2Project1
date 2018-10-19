@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="login" class="com.intern.action.LoginAction">
+            <result name="success" type="chain">users</result>
+            <result name="failure">index.jsp</result>
+        </action>
+        <action name="users" class="com.intern.action.UserViewAction">
+            <result name="success">WEB-INF/pages/home.jsp</result>
+            <result name="failure">error.jsp</result>
+        </action>
+        <action name="user_create" class="com.intern.action.SetRolesAction">
+            <result name="success">WEB-INF/pages/user/user_create.jsp</result>
+            <result name="failure">index.jsp</result>
+        </action>
+        <action name="user_save" class="com.intern.action.UserSaveAction">
+            <result name="success" type="chain">user_create</result>
+            <result name="failure" type="chain">user_create</result>
+        </action>
+    </package>
+</struts>  

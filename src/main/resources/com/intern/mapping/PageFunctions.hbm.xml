@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2018 9:31:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.intern.mapping.PageFunctions" table="page_functions" catalog="demo" optimistic-lock="version">
+        <composite-id name="id" class="com.intern.mapping.PageFunctionsId">
+            <key-property name="roleId" type="int">
+                <column name="role_id" />
+            </key-property>
+            <key-property name="pageId" type="int">
+                <column name="page_id" />
+            </key-property>
+            <key-property name="funId" type="int">
+                <column name="fun_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="function" class="com.intern.mapping.Function" update="false" insert="false" fetch="select">
+            <column name="fun_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="page" class="com.intern.mapping.Page" update="false" insert="false" fetch="select">
+            <column name="page_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="role" class="com.intern.mapping.Role" update="false" insert="false" fetch="select">
+            <column name="role_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
