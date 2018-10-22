@@ -5,7 +5,6 @@ com\intern\mapping\PageFunctionsId.class
 com\intern\action\UserViewAction.class
 com\intern\mapping\PageFunctions.class
 com\intern\mapping\Page.class
-com\intern\dao\UserSaveDao.class
 com\intern\bean\RoleBean.class
 com\intern\util\connection\Connection.class
 com\intern\service\UserService.class
@@ -13,4 +12,5 @@ com\intern\service\LoginService.class
 com\intern\mapping\User.class
 com\intern\bean\UserBean.class
 com\intern\mapping\Function.class
+com\intern\dao\UserDao.class
 com\intern\mapping\Role.class

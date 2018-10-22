@@ -14,14 +14,14 @@ import java.util.ArrayList;
 
 public class UserService {
 
-    public List<UserBean> getUsers() {
+    public List<UserBean> getUsers(int from, int to) {
         Session session = new Connection().getSession();
         List<User > users = new ArrayList<User>();
         List<UserBean> userBeanList = new ArrayList<UserBean>();
         try {
             String query = "from User";
             Query<User> q = session.createQuery(query);
-            users = q.setMaxResults(10).setFirstResult(25).list();
+            users = q.setMaxResults(to).setFirstResult(from).list();
         } finally {
             if (session != null) {
                 session.close();

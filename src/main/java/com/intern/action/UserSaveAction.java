@@ -7,7 +7,7 @@ package com.intern.action;
 
 import com.intern.bean.RoleBean;
 import com.intern.bean.UserBean;
-import com.intern.dao.UserSaveDao;
+import com.intern.dao.UserDao;
 import com.intern.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.List;
@@ -26,7 +26,7 @@ public class UserSaveAction extends ActionSupport {
     public String execute() throws Exception {
         setResultMsg(validateUser(userBean, roleId));
         if (resultMsg.equals("valid")) {
-            if (new UserSaveDao().saveUser(userBean, roleId)) {
+            if (new UserDao().saveUser(userBean, roleId)) {
                 resultMsg = "user saved successfully !";
                 return "success";
             } else {

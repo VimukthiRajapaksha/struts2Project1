@@ -4,6 +4,7 @@ C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\action\UserViewAction.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\mapping\PageFunctions.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\action\UserSaveAction.java
+C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\dao\UserDao.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\mapping\User.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\mapping\Role.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\bean\UserBean.java
@@ -12,5 +13,4 @@ C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\service\LoginService.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\action\LoginAction.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\mapping\Function.java
-C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\dao\UserSaveDao.java
 C:\Users\vimukthi_r\Documents\NetBeansProjects\StrutsProject1\src\main\java\com\intern\mapping\Page.java
